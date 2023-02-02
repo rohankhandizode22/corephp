@@ -1,0 +1,257 @@
+---> Php :- Stand for Hypertext Preprocessor.It is a server-side scripting language which is used to develop dynamic websistes.
+  -> Server Side :- which execute by the server , we need to install the server so that the application is executed eg: php , java , .net etc 
+  -> Scripting Language :- interpriting language (line by line)
+      How server side works 
+    The browser(client) send HTTP request to a web server (server). The web server receives the request and responds with an HTML document.
+
+    Php runs in the web server , processes the request and returns the HTML document.
+  -> It is an open source
+  -> It is a cross-platform language (linux , windows , mac)
+  -> It is simple , fast and stable.
+  -> Community support 
+     -> Php :- open source 
+     -> linux :- open source 
+     -> mysql :- open source
+    -> Installation of PHP 
+        XAMMP 
+           X :- cross platform
+           A :- Apache server (open source)
+           M :- MongoDB 
+           P :- Php 
+           P :- Perl | Python 
+           https://www.apachefriends.org/download.html 
+    -> extension is .php 
+    -> It is a case senstive language 
+    -> For output | print 
+      echo "--" :- language construct. Used to write multiple statements.
+      print :- write only 1 statement because return boolean.
+    -> Php Syntex 
+      <?php 
+        ----
+      ?>
+    -> Concatenation (.)
+     c/xampp/htdocs/phptraining
+      first.php 
+      <?php 
+         echo "Welcome to Php Training";
+      ?>
+      -> Open xampp server 
+        http://localhost/phptraining/first.php 
+        Output 
+        Welcome to Php Training
+    -> Every statement must be close with semicolon (;)
+    -> Variables :- temporary memeory location which hold input data 
+       syntex:
+         varname=value;
+         -> Rules to define variable name 
+           -> Must start with doller ($) sign 
+           -> after doller their is an [a-z] or underscore(_)
+           -> remaining characters can be underscores, letter or numbers
+        eg:
+          $title="Php Training";
+          $emp_name="sumit";
+      -> Php comments 
+        single line :- # // 
+        multiple line :- /*  */
+     -> Php Datatypes :- type declaration of variables is known as datatype. It allocate at runtime as per the variable value 
+        interger , string ,float, array , boolean , object , null , resource 
+        gettype() :- to find the datatype of a variable
+
+    -> php Constants :- It is a value that never be change , It is fixed and permanent.
+       define(constname,value);
+         eg:
+         define('WIDTH','1020px');
+         echo WIDTH;
+        const WIDTH='1020px'
+    -> var_dump() :- inbuild method that allows us to dump the information about a variable.
+    -> Operators :- to perform operations 
+       -> arthematic operator : + , - , / , * , % ,++, --
+       -> assignment operator :- = , += , -= , /= , *= , %= 
+       -> relational :- > , < , >= , <= 
+       -> comparision :- == , === , != , !== 
+       -> logical :- && , || , ! 
+       -> Ternaray :- (condition?true:false)
+    -> conditions 
+       if else 
+       if else if else 
+       nested if  
+       switch case
+    -> Tasks /Assignment 
+        -> Wap to assign 2 values in 2 variables and Swap them 
+          1. 3rd variable 
+          2. without 3rd variable 
+          3. in one line or expression 
+        -> wap to assign 4 digit number in a variable , reverse it and also find the sum of the digit of a number?
+        -> Wap to assign 5 subject marks in 5 variables and find the total, percentage and grade?
+        -> Wap to assign Principal, rate and time and find Simple Interest ?
+        -> Wap to assign 3 variables and find the largest one ? 
+    --> Looping (Iteration):- It is a process for executing multi-line statement at a single line or repetation of statement.
+       -> for loop , while loop , do-while 
+       -> for loop :- condition is check at the start , if condition is correct then loop execute otherwise terminate.
+          syntex :
+            for(initilization ; condition ; increment/decrement)
+            {
+                statement;
+            }
+            eg:
+            for($i=1; $i<=10;$i++){
+               echo $i."<br/>";
+            }
+        -> Task 
+            -> Wap to assign a value in a variable and display its table upto 10 ? 
+               5*1=5 
+               ---
+               5*10=50 
+        -> while loop :- same as for loop. It depend on the condition because it return boolean.
+           syntex:
+              while(condition){
+                statement;
+              }
+            -> eg:
+              $i=1;
+              while($i<=5){
+                echo $i."<br/>";
+                $i++;
+              }
+            -> Task :
+               -> wap to assign a number , reverse it and also find the sum of the digit of a number with the help of while loop?
+            -> Do while :- condition is check at the end of the loop.SO this loop execute atleast once 
+               syntex:
+                  do {
+                    statement;
+                    inc/dec;
+                  }while(condition);
+            -> Nested Loop :- loop within another loop. first the inner loop is executed then outer loop.
+              syntex:
+                 for(ini; cond; inc/dec){
+                   for(ini; cond; inc/dec){
+                       statement;
+                   }
+                 }
+
+                 * 
+                 **
+                 ***
+                 ****
+                 *****
+
+                 --> 
+                     *
+                    **
+                   ***
+                  ****
+                 *****
+            -> Task
+              -> Wap to display feboniccie series upto 10. 
+                loop is going from 1 to 10 
+              -> Wap to display all the even numbers from 1 to 50 and find their sum ?
+              -> 
+                 a 
+                 bc 
+                 def 
+                 ghij 
+                 klmno 
+                -> 
+                *****
+                *   *
+                *   *
+                *   *
+                *****
+          -> Array :- is an group of elements which are stored in a single variable of any type.(Heterogenous)
+              -> Numbered array 
+              -> Associative array 
+              -> Multi-dimensional array 
+            -> Numbered array :- same as normal array and index type is integer and start with 0.
+               -> $arr=array(val,val,val,val);
+                  or 
+                  $arr=[val,val,val,val,..];
+                eg:
+                  $arr=[23, "anuj",56.78];
+                  echo $arr[1];
+                  -> to find the size of an array 
+                    sizeof(arrayname)
+                    count(arrayname)
+                  eg:
+      $arr=[234,"anuj",67.78];
+   for($i=0;$i<count($arr);$i++){
+    echo $arr[$i]."<br/>";
+   }
+
+   -> Wap to assign 10 integer values in an array , find the sum and the largest value from an array ? 
+
+   --> Associative Array :- In this array we can define index either number or string or alphanumeric 
+      eg:
+        $arr=[key=>value,key=>value,..]
+  -> Multi-dimension array :- array within another array (matrix)
+    eg:
+       $arr=[
+            [2,3,4],
+            [5,6,7]
+       ]
+          0 1 2
+        0 2 3 4 
+        1 5 6 7 
+
+        echo $arr[0][1];//3 
+      eg:
+      $arr=[
+        "india"=> ["cap"=>"delhi","ng"=>"Hockey"],
+        "usa" => ["cap"=>"Wasignton","ng"=>"Baseball"],
+        "england" => ["cap"=>"London","ng"=>"Cricket"]
+      ]
+      echo $arr["india"]["ng"];//Hockey 
+      output 
+     S.no  Countey Capital National Game 
+     1      india   Delhi   Hockey 
+     -----
+
+     --> Function :- reusability purpose 
+        -> Inbuild 
+        -> User Defined 
+           -> with arguments 
+               -> call by value 
+               -> call by reference 
+           -> without arguments 
+        ** return one value at a time 
+        -> function should return a value 
+        -> Syntex 
+          function functionname(){
+             //code 
+          }
+          functionname();
+        -> Recursive Function :- function call itself many time in a same function is known as Recursive function
+
+        --> Form Handling :- with the help of forms we can input data and perform operations .
+          -> How we read form field values in php 
+             There are 3 super-globel array variables :- 
+               $_GET['fieldname'] : method get 
+               $_POST['fieldname'] :- method post (prefer)
+               $_REQUEST['fieldname'] :- both for get and post 
+
+               Name : <input type="text" name="fname"/>
+
+                 $name=$_POST['fname'];
+            -> isset() :- to check null or not 
+            -> empty() :- to check blank fields 
+            -> unset() :- to destroy the variables 
+
+            --> Task 
+            Calculater 
+          No1 :  textbox 
+          No2 :  textbox 
+          Select :  dropdown(select menu) (add,sub,mul,div)
+          Result : textbox 
+             Submit 
+        -> Form Validation in Php (Server Side Validations)
+           --> preg_match() :- It finds string for a pattern, and It returns true if a pattern exists and else returns false.
+
+        -> Task 
+            Name (alphabate and white space)
+            Email (valid email)
+            Password (min 8 , maximum 24)
+            Gender  select one 
+            Hobbies select one 
+            Comment minimum 20 characters 
+              Submit 
+              All are required
+                
